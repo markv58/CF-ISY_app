@@ -1,0 +1,1310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gui>
+  <properties>
+    <project>Full Isy iPhone</project>
+    <designer>Mark Vittes</designer>
+    <size autoposition="scale">
+      <portrait width="320" height="568" />
+      <landscape width="568" height="320" />
+    </size>
+    <autoposition />
+    <imagefolder>
+    </imagefolder>
+    <debug loaderrors="0" connectionerrors="0" />
+  </properties>
+  <systems>
+    <system name="ISY" protocol="tcp" accept="0" ip="xxx.xxx.xxx.xxx" port="8351" origin="8351" alwayson="0" idleTimeout="0" dialogTimeout="0" heartbeatMode="-1" heartbeatRx="" heartbeatTx="" textEncoding="" eom="" js="" connectionStatus="0" disconnectionStatus="0" startupCmd="" startupMacro="" offlinequeue="1" ssl="1">
+      <cmd name="garageOpen" target="d4" value="1">GET /rest/programs/0067/runThen HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="garageClose" target="d6" value="1">GET /rest/programs/00B2/runThen HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="garageStop">GET /rest/programs/00A5/runThen HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="garagePPon" target="d2" value="1">GET /rest/nodes/31%20A5%2028%201/cmd/DON HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="garagePPoff" target="d2" value="0">GET /rest/nodes/31%20A5%2028%201/cmd/DOF HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="garageShopOn" target="d9" value="1">GET /rest/nodes/5286/cmd/DON HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="garageShopOff" target="d9" value="0">GET /rest/nodes/5286/cmd/DOF HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="securityLeave" target="d7" value="1">GET /rest/programs/005F/runThen HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="securityArrive" target="d1" value="1">GET /rest/programs/005C/runThen HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="avMute">GET /rest/programs/0102/runThen HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="avVolUp">GET /rest/programs/0101/runThen HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="avVolDown">GET /rest/programs/0101/runElse HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="garageSirenOn">GET /rest/nodes/ZW023%5F1/cmd/DON HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="garageSirenOff">GET /rest/nodes/ZW023%5F1/cmd/DOF HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="garageLightOn" target="d1" value="1">GET /rest/nodes/24%20DC%2098%201/cmd/DON HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="garageLightOff" target="d1" value="0">GET /rest/nodes/24%20DC%2098%201/cmd/DOF HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="lr_Fan_Bulb_On">GET /rest/nodes/21%20FA%202%201/cmd/DON HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="lr_Fan_Bulb_Off">GET /rest/nodes/21%20FA%202%201/cmd/DOF HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="lr_Wall_On" target="d212" value="1">GET /rest/nodes/4B%20B4%200%201/cmd/DON HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="lr_Wall_Off" target="d212" value="0">GET /rest/nodes/4B%20B4%200%201/cmd/DOF HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="entryLockDoor">GET /rest/programs/00C1/runThen HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="entryUnLockDoor">GET /rest/programs/00C1/runElse HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="entryCeilingOn">GET /rest/nodes/24%2070%2039%201/cmd/DON HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="entryCeilingOff">GET /rest/nodes/24%2070%2039%201/cmd/DOF HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="entryPorchOn">GET /rest/nodes/2F%2031%204A%201/cmd/DON HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="entryPorchOff">GET /rest/nodes/2F%2031%204A%201/cmd/DOF HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="garageDrivewayOn">GET /rest/nodes/33%2087%2093%201/cmd/DON HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="garageDrivewayOff">GET /rest/nodes/33%2087%2093%201/cmd/DOF HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="lr_scene_MovieOn">GET /rest/nodes/34809/cmd/DON HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="lr_scene_MovieOff">GET /rest/nodes/34809/cmd/DOF HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="lr_scene_TvOn">GET /rest/nodes/47237/cmd/DON HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="lr_scene_TvOff">GET /rest/nodes/47237/cmd/DOF HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="office_ceilingOn">GET /rest/nodes/4B%20C3%20F6%201/cmd/DON HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="office_ceilingOff">GET /rest/nodes/4B%20C3%20F6%201/cmd/DOF HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="mbr_FoyerOn"> GET /rest/nodes/29%20B5%207A%201/cmd/DON HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="Generic_InsteonOn">GET /rest/nodes/XX%20XX%20XX%201/cmd/DON HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="mbr_FoyerOff"> GET /rest/nodes/29%20B5%207A%201/cmd/DOF HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="mbr_LightsOn">GET /rest/nodes/29398/cmd/DON HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="mbr_LightsOff">GET /rest/nodes/29398/cmd/DOF HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="mbr_FloorLampOn">GET /rest/nodes/33%2090%200%201/cmd/DON HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="mbr_FloorLampOff">GET /rest/nodes/33%2090%200%201/cmd/DOF HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="mbr_BedsideLampOn">GET /rest/nodes/2F%202A%206B%201/cmd/DON HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="mbr_BedsideLampOff">GET /rest/nodes/2F%202A%206B%201/cmd/DOF HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="kitchen_countersOn"> GET /rest/nodes/61030/cmd/DON HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="kitchen_countersOff"> GET /rest/nodes/61030/cmd/DOF HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="kitchen_sinkOn">GET /rest/nodes/ZW018%5F1/cmd/DON/20 HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="Generic_ZwaveOn">GET /rest/nodes/ZWXXX%5F1/cmd/DON HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="kitchen_sinkOff">GET /rest/nodes/ZW018%5F1/cmd/DOF HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="kitchen_tableOn">GET /rest/nodes/ZW011%5F1/cmd/DON/10 HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="kitchen_tableOff">GET /rest/nodes/ZW011%5F1/cmd/DOF HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="kitchen_lightsOn">GET /rest/nodes/6867/cmd/DON HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="kitchen_lightsOff">GET /rest/nodes/6867/cmd/DON HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="kitchen_fanOn">GET /rest/nodes/3D%20BB%20CF%202/cmd/DON HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="kitchen_fanOff">GET /rest/nodes/3D%20BB%20CF%202/cmd/DOF HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="frontroom_ceilingOn">GET /rest/nodes/ZW031%5F1/cmd/DON/35 HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="frontroom_ceilingOff">GET /rest/nodes/ZW031%5F1/cmd/DOF HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="Generic_program_run">GET /rest/programs/0102/runThen HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="av_lr_FireTV">GET /rest/programs/0128/runElse HTTPS/1.1\x0D\x0AHOST: xxx.xxx.xxx.xxx \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="av_lr_TV">GET /rest/programs/0128/runThen HTTPS/1.1\x0D\x0AHOST: xxx.xxx.xxx.xxx \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="Generic_ns_On">GET /rest/nodes/n003%5fdc4f22c13ae8/cmd/DON HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="lr_table_lampOn">GET /rest/nodes/n005%5fd073d5318f63/cmd/DON/25  HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="lr_table_lampOff">GET /rest/nodes/n005%5fd073d5318f63/cmd/DOF HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="security_Set_1"> GET /rest/vars/set/2/12/1 HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="security_Set_4"> GET /rest/vars/set/2/12/4 HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="security_Set_2"> GET /rest/vars/set/2/12/2 HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="security_Set_3"> GET /rest/vars/set/2/12/3 HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="av_ChanelUp">GET /rest/programs/0115/runThen HTTPS/1.1\x0D\x0AHOST: xxx.xxx.xxx.xxx \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="av_ChanelDown">GET /rest/programs/0115/runElse HTTPS/1.1\x0D\x0AHOST: xxx.xxx.xxx \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="av_Ret">GET /rest/programs/00F9/runThen HTTPS/1.1\x0D\x0AHOST: xxx.xxx.xxx.xxx \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="av_TV_1">GET /rest/programs/0101/runThen HTTPS/1.1\x0D\x0AHOST: xxx.xxx.xxx.xxx \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="av_TV_2">GET /rest/programs/0101/runElse HTTPS/1.1\x0D\x0AHOST: xxx.xxx.xxx.xxx \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="av_TV_3">GET /rest/programs/0102/runThen HTTPS/1.1\x0D\x0AHOST: xxx.xxx.xxx.xxx \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="av_TV_4">GET /rest/programs/0102/runElse HTTPS/1.1\x0D\x0AHOST: xxx.xxx.xxx.xxx \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="av_TV_Enter">GET /rest/programs/0120/runThen HTTPS/1.1\x0D\x0AHOST: xxx.xxx.xxx.xxx \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="av_TV_Astrisk">GET /rest/programs/011F/runThen HTTPS/1.1\x0D\x0AHOST: xxx.xxx.xxx.xxx \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="av_TV_5">GET /rest/programs/011B/runThen HTTPS/1.1\x0D\x0AHOST: xxx.xxx.xxx.xxx \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="av_TV_6">GET /rest/programs/011B/runElse HTTPS/1.1\x0D\x0AHOST: xxx.xxx.xxx.xxx \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="av_TV_7">GET /rest/programs/011C/runThen HTTPS/1.1\x0D\x0AHOST: xxx.xxx.xxx.xxx \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="av_TV_8">GET /rest/programs/011C/runElse HTTPS/1.1\x0D\x0AHOST: xxx.xxx.xxx.xxx \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="av_TV_9">GET /rest/programs/011E/runThen HTTPS/1.1\x0D\x0AHOST: xxx.xxx.xxx.xxx \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="av_TV_0">GET /rest/programs/011E/runElse HTTPS/1.1\x0D\x0AHOST: xxx.xxx.xxx.xxx \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="av_TV_Fav_23">GET /rest/programs/00F9/runThen HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="IS_all_off">GET /rest/nodes/41170/cmd/DOF HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="entry_lock_status">GET /rest/programs/0121/runIf HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="entry_Unlock_status">GET /rest/programs/010B/runIf HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="sec_Deadman">GET /rest/programs/00B6/runThen HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="entry_lock_query">GET /rest/programs/0124/runThen HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="av_lr_AV_off">GET /rest/programs/0129/runThen HTTPS/1.1\x0D\x0AHOST: xxx.xxx.xxx.xxx \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="lr_flampOn">GET /rest/nodes/3E%207C%20E9%201/cmd/DON HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="lr_flampOff">GET /rest/nodes/3E%207C%20E9%201/cmd/DOF HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <cmd name="sec_BI_reboot">GET /rest/programs/0071/runThen HTTPS/1.1\x0D\x0AHOST: 10.108.9.161 \x0AAuthorization: Basic dXNlcjpwYXNzd29yZA==</cmd>
+      <fb name="Feedback" regex="Startup=(01)?(02)?(03)?(04)?(05)">
+        <group index="1" name="[ShopLights]" datatype="d" target="d1" settoken="1" offVal="0" onVal="1" />
+        <group index="1" name="[Pump]" datatype="d" target="d2" settoken="1" offVal="0" onVal="1" />
+        <group index="1" name="[Leave]" datatype="d" target="d7" settoken="1" offVal="0" onVal="1" />
+        <group index="1" name="[Arrive]" datatype="d" target="d8" settoken="1" offVal="0" onVal="1" />
+        <group index="1" name="[GDss]" datatype="d" target="d5" settoken="1" offVal="0" onVal="1" />
+      </fb>
+    </system>
+    <system name="Toggle" protocol="tcp" datatype="iviewer-protocol" accept="0" alwayson="1" ip="127.0.0.1" port="10207" connectionStatus="0" disconnectionStatus="0" password="" offlinequeue="1" js="" textEncoding="" ssl="0">
+      <cmd name="avPanelOff" target="d1001" value="0">0</cmd>
+      <cmd name="garageDoorDownOff" target="d107" value="0">0</cmd>
+      <cmd name="garageDoorDownOn" target="d107" value="1">1</cmd>
+      <cmd name="garageDoorUpOff" target="d105" value="0">0</cmd>
+      <cmd name="garageDoorUpOn" target="d105" value="1">1</cmd>
+      <cmd name="securityLeaveConfOn" target="d1003" value="1">1</cmd>
+      <cmd name="securityLeaveConfOff" target="d1003" value="0">1</cmd>
+      <cmd name="securityArriveConfOn" target="d1004" value="1">1</cmd>
+      <cmd name="securityArriveConfOff" target="d1004" value="0">0</cmd>
+      <cmd name="avPanelOn" target="d1002" value="1">1</cmd>
+      <cmd name="securityPanelOff" target="d1005" value="0">0</cmd>
+      <cmd name="avFavoritesOff" target="d900" value="0">0</cmd>
+      <cmd name="avFavoritesOn" target="d900" value="1">0</cmd>
+      <cmd name="entryUnlockConfOff" target="d302" value="0">0</cmd>
+      <cmd name="entryUnlockConfrOn" target="d302" value="1">1</cmd>
+      <cmd name="ConfOpenOn" target="d110" value="1">1</cmd>
+      <cmd name="ConfOpenOFF" target="d110" value="0">0</cmd>
+      <cmd name="securityBIConfOn" target="d2001" value="1">1</cmd>
+      <cmd name="securityBIConfOff" target="d2001" value="0">0</cmd>
+    </system>
+    <system name="Yamaha Receiver" protocol="http" eom="" ip="xxx.xxx.xxx.xxx" port="80" connectionStatus="0" disconnectionStatus="0" startupCmd="" startupMacro="" js="" textEncoding="" ssl="0">
+      <cmd name="VolumeUp">http://xxx.xxx.xxx.xxx/YamahaExtendedControl/v1/main/setVolume?volume=up&amp;step=4</cmd>
+      <cmd name="VolumeDown">http://xxx.xxx.xxx.xxx/YamahaExtendedControl/v1/main/setVolume?volume=down&amp;step=4</cmd>
+      <cmd name="MuteOn">http://xxx.xxx.xxx.xxx/YamahaExtendedControl/v1/main/setMute?enable=true</cmd>
+      <cmd name="MuteOff">http://xxx.xxx.xxx.xxx/YamahaExtendedControl/v1/main/setMute?enable=false</cmd>
+    </system>
+  </systems>
+  <themes>
+    <theme type="background" name=".portrait"><![CDATA[ background-image: url(bg_portrait.png); background-repeat: no-repeat;]]></theme>
+    <theme type="background" name=".landscape"><![CDATA[ background-image: url(bg_landscape.png); background-repeat: no-repeat;]]></theme>
+    <theme type="text" name=".small_bold_c"><![CDATA[ text-shadow: rgba(0,0,0,1) 0px 1px 0px; color: #FFFFFF; font-size: 12px; font-family: 'Arial'; text-align: center; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".small_bold_l"><![CDATA[ text-shadow: rgba(0,0,0,1) 0px 1px 0px; color: #FFFFFF; font-size: 12px; font-family: 'Arial'; text-align: left; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".small_bold_r"><![CDATA[ text-shadow: rgba(0,0,0,1) 0px 1px 0px; color: #FFFFFF; font-size: 12px; font-family: 'Arial'; text-align: right; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".med_bol_l"><![CDATA[ text-shadow: rgba(0,0,0,1) 0px 1px 0px; color: #FFFFFF; font-size: 16px; font-family: 'Arial'; text-align: left; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".med_bol_c"><![CDATA[ text-shadow: rgba(0,0,0,1) 0px 1px 0px; color: #FFFFFF; font-size: 16px; font-family: 'Arial'; text-align: center; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".med_bol_r"><![CDATA[ text-shadow: rgba(0,0,0,1) 0px 1px 0px; color: #FFFFFF; font-size: 16px; font-family: 'Arial'; text-align: right; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".large_bold_r"><![CDATA[ text-shadow: rgba(0,0,0,1) 0px 1px 0px; color: #FFFFFF; font-size: 22px; font-family: 'Arial'; text-align: right; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".large_bold_c"><![CDATA[ text-shadow: rgba(0,0,0,1) 0px 1px 0px; color: #FFFFFF; font-size: 22px; font-family: 'Arial'; text-align: center; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".large_bold_l"><![CDATA[ text-shadow: rgba(0,0,0,1) 0px 1px 0px; color: #FFFFFF; font-size: 22px; font-family: 'Arial'; text-align: left; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".grey_bold_c"><![CDATA[ text-shadow: rgba(0,0,0,1) 0px -1px 0px; color: #C0C0C0; font-size: 12px; font-family: 'Arial'; text-align: center; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".grey_bold_r"><![CDATA[ text-shadow: rgba(0,0,0,1) 0px -1px 0px; color: #C0C0C0; font-size: 12px; font-family: 'Arial'; text-align: right; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".grey_bold_l"><![CDATA[ text-shadow: rgba(0,0,0,1) 0px -1px 0px; color: #C0C0C0; font-size: 12px; font-family: 'Arial'; text-align: left; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".large_bold_c_1"><![CDATA[ text-shadow: rgba(0,0,0,1) 0px 1px 0px; color: #FFFFFF; font-size: 22px; font-family: 'Arial'; text-align: center; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".large_bold_c_2"><![CDATA[ text-shadow: rgba(0,0,0,1) 0px 1px 0px; color: #FFFFFF; font-size: 22px; font-family: 'Arial'; text-align: center; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".small_bold_l_1"><![CDATA[ text-shadow: rgba(0,0,0,1) 0px 1px 0px; color: #FFFFFF; font-size: 12px; font-family: 'Arial'; text-align: left; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".small_bold_l_2"><![CDATA[ text-shadow: rgba(0,0,0,1) 0px 1px 0px; color: #FFFFFF; font-size: 12px; font-family: 'Arial'; text-align: left; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".small_bold_l_3"><![CDATA[ text-shadow: rgba(0,0,0,1) 0px 1px 0px; color: #FFFFFF; font-size: 12px; font-family: 'Arial'; text-align: left; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".small_bold_l_4"><![CDATA[ text-shadow: rgba(0,0,0,1) 0px 1px 0px; color: #FFFFFF; font-size: 12px; font-family: 'Arial'; text-align: left; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".small_bold_l_5"><![CDATA[ text-shadow: rgba(0,0,0,1) 0px 1px 0px; color: #FFFFFF; font-size: 12px; font-family: 'Arial'; text-align: left; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".title_l"><![CDATA[ text-shadow: rgba(0,0,0,0.39) 0px -1px 0px; color: #FFFFFF; font-size: 20px; font-name: 'HelveticaNeue-Bold'; font-family: 'Helvetica Neue'; text-align: left; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".title_c"><![CDATA[ text-shadow: rgba(0,0,0,0.39) 0px -1px 0px; color: #FFFFFF; font-size: 20px; font-name: 'HelveticaNeue-Bold'; font-family: 'Helvetica Neue'; text-align: center; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".title_r"><![CDATA[ text-shadow: rgba(0,0,0,0.39) 0px -1px 0px; color: #FFFFFF; font-size: 20px; font-name: 'HelveticaNeue-Bold'; font-family: 'Helvetica Neue'; text-align: right; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".20_c"><![CDATA[ text-shadow: rgba(255,255,255,0.78) 0px 1px 0px; color: #373737; font-size: 20px; font-name: 'HelveticaNeue-Bold'; font-family: 'Helvetica Neue'; text-align: center; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".20_l"><![CDATA[ text-shadow: rgba(255,255,255,0.78) 0px 1px 0px; color: #373737; font-size: 20px; font-name: 'HelveticaNeue-Bold'; font-family: 'Helvetica Neue'; text-align: left; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".20_r"><![CDATA[ text-shadow: rgba(255,255,255,0.78) 0px 1px 0px; color: #373737; font-size: 20px; font-name: 'HelveticaNeue-Bold'; font-family: 'Helvetica Neue'; text-align: right; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".14_c"><![CDATA[ text-shadow: rgba(255,255,255,0.78) 0px 1px 0px; color: #373737; font-size: 14px; font-name: 'HelveticaNeue-Bold'; font-family: 'Helvetica Neue'; text-align: center; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".14_l"><![CDATA[ text-shadow: rgba(255,255,255,0.78) 0px 1px 0px; color: #373737; font-size: 14px; font-name: 'HelveticaNeue-Bold'; font-family: 'Helvetica Neue'; text-align: left; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".14_r"><![CDATA[ text-shadow: rgba(255,255,255,0.78) 0px 1px 0px; color: #373737; font-size: 14px; font-name: 'HelveticaNeue-Bold'; font-family: 'Helvetica Neue'; text-align: right; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".small_bold_c_1"><![CDATA[ text-shadow: rgba(0,0,0,1) 0px 1px 0px; color: #FFFFFF; font-size: 12px; font-family: 'Arial'; text-align: center; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".small_bold_l_6"><![CDATA[ text-shadow: rgba(0,0,0,1) 0px 1px 0px; color: #FFFFFF; font-size: 12px; font-family: 'Arial'; text-align: left; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".small_bold_r_1"><![CDATA[ text-shadow: rgba(0,0,0,1) 0px 1px 0px; color: #FFFFFF; font-size: 12px; font-family: 'Arial'; text-align: right; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".med_bol_l_1"><![CDATA[ text-shadow: rgba(0,0,0,1) 0px 1px 0px; color: #FFFFFF; font-size: 16px; font-family: 'Arial'; text-align: left; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".med_bol_c_1"><![CDATA[ text-shadow: rgba(0,0,0,1) 0px 1px 0px; color: #FFFFFF; font-size: 16px; font-family: 'Arial'; text-align: center; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".med_bol_r_1"><![CDATA[ text-shadow: rgba(0,0,0,1) 0px 1px 0px; color: #FFFFFF; font-size: 16px; font-family: 'Arial'; text-align: right; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".large_bold_r_1"><![CDATA[ text-shadow: rgba(0,0,0,1) 0px 1px 0px; color: #FFFFFF; font-size: 22px; font-family: 'Arial'; text-align: right; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".large_bold_c_3"><![CDATA[ text-shadow: rgba(0,0,0,1) 0px 1px 0px; color: #FFFFFF; font-size: 22px; font-family: 'Arial'; text-align: center; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".large_bold_l_1"><![CDATA[ text-shadow: rgba(0,0,0,1) 0px 1px 0px; color: #FFFFFF; font-size: 22px; font-family: 'Arial'; text-align: left; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".grey_bold_c_1"><![CDATA[ text-shadow: rgba(0,0,0,1) 0px -1px 0px; color: #C0C0C0; font-size: 12px; font-family: 'Arial'; text-align: center; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".grey_bold_r_1"><![CDATA[ text-shadow: rgba(0,0,0,1) 0px -1px 0px; color: #C0C0C0; font-size: 12px; font-family: 'Arial'; text-align: right; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".grey_bold_l_1"><![CDATA[ text-shadow: rgba(0,0,0,1) 0px -1px 0px; color: #C0C0C0; font-size: 12px; font-family: 'Arial'; text-align: left; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".Large_C"><![CDATA[ text-shadow: rgba(0,0,0,1) 1px -1px 1px; color: #FFFFFF; font-size: 34px; font-family: 'Arial'; text-align: center; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".title_l_1"><![CDATA[ text-shadow: rgba(0,0,0,0.39) 0px -1px 0px; color: #FFFFFF; font-size: 20px; font-name: 'HelveticaNeue-Bold'; font-family: 'Helvetica Neue'; text-align: left; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".title_c_1"><![CDATA[ text-shadow: rgba(0,0,0,0.39) 0px -1px 0px; color: #FFFFFF; font-size: 20px; font-name: 'HelveticaNeue-Bold'; font-family: 'Helvetica Neue'; text-align: center; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".title_r_1"><![CDATA[ text-shadow: rgba(0,0,0,0.39) 0px -1px 0px; color: #FFFFFF; font-size: 20px; font-name: 'HelveticaNeue-Bold'; font-family: 'Helvetica Neue'; text-align: right; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".20_c_1"><![CDATA[ text-shadow: rgba(255,255,255,0.78) 0px 1px 0px; color: #373737; font-size: 20px; font-name: 'HelveticaNeue-Bold'; font-family: 'Helvetica Neue'; text-align: center; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".20_l_1"><![CDATA[ text-shadow: rgba(255,255,255,0.78) 0px 1px 0px; color: #373737; font-size: 20px; font-name: 'HelveticaNeue-Bold'; font-family: 'Helvetica Neue'; text-align: left; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".20_r_1"><![CDATA[ text-shadow: rgba(255,255,255,0.78) 0px 1px 0px; color: #373737; font-size: 20px; font-name: 'HelveticaNeue-Bold'; font-family: 'Helvetica Neue'; text-align: right; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".14_c_1"><![CDATA[ text-shadow: rgba(255,255,255,0.78) 0px 1px 0px; color: #373737; font-size: 14px; font-name: 'HelveticaNeue-Bold'; font-family: 'Helvetica Neue'; text-align: center; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".14_l_1"><![CDATA[ text-shadow: rgba(255,255,255,0.78) 0px 1px 0px; color: #373737; font-size: 14px; font-name: 'HelveticaNeue-Bold'; font-family: 'Helvetica Neue'; text-align: left; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="text" name=".14_r_1"><![CDATA[ text-shadow: rgba(255,255,255,0.78) 0px 1px 0px; color: #373737; font-size: 14px; font-name: 'HelveticaNeue-Bold'; font-family: 'Helvetica Neue'; text-align: right; vertical-align: middle; font-weight: bold; font-style: none; text-decoration: none; display: table-cell;]]></theme>
+    <theme type="background" name=".ISY_background1_portrait"><![CDATA[ background-image: url(Custom Isy\isy_background.png); background-repeat: no-repeat;]]></theme>
+    <theme type="background" name=".ISY_background3_portrait"><![CDATA[ background-image: url(Custom Isy\ISY_background3.png); background-repeat: no-repeat;]]></theme>
+    <theme type="background" name=".ISY_background2_portrait"><![CDATA[ background-image: url(Custom Isy\ISY_background2.png); background-repeat: no-repeat;]]></theme>
+    <theme type="button" name=".isy_grey_top[state='0']"><![CDATA[padding: 0px 0px 0px 0px; background-image: url(Custom Isy\ISY_grey_top.png); color: #FFFFFF; font-size: 12px; font-family: 'Verdana'; font-weight: normal; font-style: none; text-decoration: none; text-align: center; vertical-align: middle; display: table-cell; box-sizing: border-box; -webkit-box-sizing: border-box; -webkit-tap-highlight-color:rgba(0,0,0,0);]]></theme>
+    <theme type="button" name=".isy_grey_top[state='1']"><![CDATA[padding: 0px 0px 0px 0px; background-image: url(Custom Isy\ISY_blue_top.png); color: #FFFFFF; font-size: 12px; font-family: 'Verdana'; font-weight: normal; font-style: none; text-decoration: none; text-align: center; vertical-align: middle; display: table-cell; box-sizing: border-box; -webkit-box-sizing: border-box; -webkit-tap-highlight-color:rgba(0,0,0,0);]]></theme>
+    <theme type="button" name=".isy_grey_bot[state='0']"><![CDATA[padding: 0px 0px 0px 0px; background-image: url(Custom Isy\ISY_grey_bot.png); color: #FFFFFF; font-size: 12px; font-family: 'Verdana'; font-weight: normal; font-style: none; text-decoration: none; text-align: center; vertical-align: middle; display: table-cell; box-sizing: border-box; -webkit-box-sizing: border-box; -webkit-tap-highlight-color:rgba(0,0,0,0);]]></theme>
+    <theme type="button" name=".isy_grey_bot[state='1']"><![CDATA[padding: 0px 0px 0px 0px; background-image: url(Custom Isy\ISY_blue_bot.png); color: #FFFFFF; font-size: 12px; font-family: 'Verdana'; font-weight: normal; font-style: none; text-decoration: none; text-align: center; vertical-align: middle; display: table-cell; box-sizing: border-box; -webkit-box-sizing: border-box; -webkit-tap-highlight-color:rgba(0,0,0,0);]]></theme>
+    <theme type="button" name=".isy_grey_center[state='0']"><![CDATA[padding: 0px 0px 0px 0px; background-image: url(Custom Isy\ISY_grey_center.png); color: #FFFFFF; font-size: 12px; font-family: 'Verdana'; font-weight: normal; font-style: none; text-decoration: none; text-align: center; vertical-align: middle; display: table-cell; box-sizing: border-box; -webkit-box-sizing: border-box; -webkit-tap-highlight-color:rgba(0,0,0,0);]]></theme>
+    <theme type="button" name=".isy_grey_center[state='1']"><![CDATA[padding: 0px 0px 0px 0px; background-image: url(Custom Isy\ISY_blue_center.png); color: #FFFFFF; font-size: 12px; font-family: 'Verdana'; font-weight: normal; font-style: none; text-decoration: none; text-align: center; vertical-align: middle; display: table-cell; box-sizing: border-box; -webkit-box-sizing: border-box; -webkit-tap-highlight-color:rgba(0,0,0,0);]]></theme>
+    <theme type="button" name=".isy_grey_sec[state='0']"><![CDATA[padding: 0px 0px 0px 0px; background-image: url(Custom Isy\ISY_grey_sec.png); color: #FFFFFF; font-size: 12px; font-family: 'Verdana'; font-weight: normal; font-style: none; text-decoration: none; text-align: center; vertical-align: middle; display: table-cell; box-sizing: border-box; -webkit-box-sizing: border-box; -webkit-tap-highlight-color:rgba(0,0,0,0);]]></theme>
+    <theme type="button" name=".isy_grey_sec[state='1']"><![CDATA[padding: 0px 0px 0px 0px; background-image: url(Custom Isy\ISY_grey_sec.png); color: #FFFFFF; font-size: 12px; font-family: 'Verdana'; font-weight: normal; font-style: none; text-decoration: none; text-align: center; vertical-align: middle; display: table-cell; box-sizing: border-box; -webkit-box-sizing: border-box; -webkit-tap-highlight-color:rgba(0,0,0,0);]]></theme>
+    <theme type="button" name=".isy_grey_single[state='0']"><![CDATA[padding: 0px 0px 0px 0px; background-image: url(Custom Isy\ISY_grey_single.png); color: #FFFFFF; font-size: 12px; font-family: 'Verdana'; font-weight: normal; font-style: none; text-decoration: none; text-align: center; vertical-align: middle; display: table-cell; box-sizing: border-box; -webkit-box-sizing: border-box; -webkit-tap-highlight-color:rgba(0,0,0,0);]]></theme>
+    <theme type="button" name=".isy_grey_single[state='1']"><![CDATA[padding: 0px 0px 0px 0px; background-image: url(Custom Isy\ISY_blue_single.png); color: #FFFFFF; font-size: 12px; font-family: 'Verdana'; font-weight: normal; font-style: none; text-decoration: none; text-align: center; vertical-align: middle; display: table-cell; box-sizing: border-box; -webkit-box-sizing: border-box; -webkit-tap-highlight-color:rgba(0,0,0,0);]]></theme>
+    <theme type="button" name=".isy_grey_bulb[state='0']"><![CDATA[padding: 0px 0px 0px 0px; background-image: url(Custom Isy\ISY_grey_bulb.png); color: #FFFFFF; font-size: 12px; font-family: 'Verdana'; font-weight: normal; font-style: none; text-decoration: none; text-align: center; vertical-align: middle; display: table-cell; box-sizing: border-box; -webkit-box-sizing: border-box; -webkit-tap-highlight-color:rgba(0,0,0,0);]]></theme>
+    <theme type="button" name=".isy_grey_bulb[state='1']"><![CDATA[padding: 0px 0px 0px 0px; background-image: url(Custom Isy\ISY_blue_bulb.png); color: #FFFFFF; font-size: 12px; font-family: 'Verdana'; font-weight: normal; font-style: none; text-decoration: none; text-align: center; vertical-align: middle; display: table-cell; box-sizing: border-box; -webkit-box-sizing: border-box; -webkit-tap-highlight-color:rgba(0,0,0,0);]]></theme>
+    <theme type="button" name=".isy_grey_home[state='0']"><![CDATA[padding: 0px 0px 0px 0px; background-image: url(Custom Isy\ISY_grey_home.png); color: #FFFFFF; font-size: 12px; font-family: 'Verdana'; font-weight: normal; font-style: none; text-decoration: none; text-align: center; vertical-align: middle; display: table-cell; box-sizing: border-box; -webkit-box-sizing: border-box; -webkit-tap-highlight-color:rgba(0,0,0,0);]]></theme>
+    <theme type="button" name=".isy_grey_home[state='1']"><![CDATA[padding: 0px 0px 0px 0px; background-image: url(Custom Isy\ISY_grey_home.png); color: #FFFFFF; font-size: 12px; font-family: 'Verdana'; font-weight: normal; font-style: none; text-decoration: none; text-align: center; vertical-align: middle; display: table-cell; box-sizing: border-box; -webkit-box-sizing: border-box; -webkit-tap-highlight-color:rgba(0,0,0,0);]]></theme>
+    <theme type="button" name=".isy_grey_left[state='0']"><![CDATA[padding: 0px 0px 0px 0px; background-image: url(Custom Isy\ISY_grey_left.png); color: #FFFFFF; font-size: 12px; font-family: 'Verdana'; font-weight: normal; font-style: none; text-decoration: none; text-align: center; vertical-align: middle; display: table-cell; box-sizing: border-box; -webkit-box-sizing: border-box; -webkit-tap-highlight-color:rgba(0,0,0,0);]]></theme>
+    <theme type="button" name=".isy_grey_left[state='1']"><![CDATA[padding: 0px 0px 0px 0px; background-image: url(Custom Isy\ISY_blue_left.png); color: #FFFFFF; font-size: 12px; font-family: 'Verdana'; font-weight: normal; font-style: none; text-decoration: none; text-align: center; vertical-align: middle; display: table-cell; box-sizing: border-box; -webkit-box-sizing: border-box; -webkit-tap-highlight-color:rgba(0,0,0,0);]]></theme>
+    <theme type="button" name=".isy_grey_middle[state='0']"><![CDATA[padding: 0px 0px 0px 0px; background-image: url(Custom Isy\ISY_grey_middle.png); color: #FFFFFF; font-size: 12px; font-family: 'Verdana'; font-weight: normal; font-style: none; text-decoration: none; text-align: center; vertical-align: middle; display: table-cell; box-sizing: border-box; -webkit-box-sizing: border-box; -webkit-tap-highlight-color:rgba(0,0,0,0);]]></theme>
+    <theme type="button" name=".isy_grey_middle[state='1']"><![CDATA[padding: 0px 0px 0px 0px; background-image: url(Custom Isy\ISY_blue_middle.png); color: #FFFFFF; font-size: 12px; font-family: 'Verdana'; font-weight: normal; font-style: none; text-decoration: none; text-align: center; vertical-align: middle; display: table-cell; box-sizing: border-box; -webkit-box-sizing: border-box; -webkit-tap-highlight-color:rgba(0,0,0,0);]]></theme>
+    <theme type="button" name=".isy_grey_right[state='0']"><![CDATA[padding: 0px 0px 0px 0px; background-image: url(Custom Isy\ISY_grey_right.png); color: #FFFFFF; font-size: 12px; font-family: 'Verdana'; font-weight: normal; font-style: none; text-decoration: none; text-align: center; vertical-align: middle; display: table-cell; box-sizing: border-box; -webkit-box-sizing: border-box; -webkit-tap-highlight-color:rgba(0,0,0,0);]]></theme>
+    <theme type="button" name=".isy_grey_right[state='1']"><![CDATA[padding: 0px 0px 0px 0px; background-image: url(Custom Isy\ISY_blue_right.png); color: #FFFFFF; font-size: 12px; font-family: 'Verdana'; font-weight: normal; font-style: none; text-decoration: none; text-align: center; vertical-align: middle; display: table-cell; box-sizing: border-box; -webkit-box-sizing: border-box; -webkit-tap-highlight-color:rgba(0,0,0,0);]]></theme>
+    <theme type="button" name=".isy_grey_yes[state='0']"><![CDATA[padding: 0px 0px 0px 0px; background-image: url(Custom Isy\ISY_grey_yes.png); color: #FFFFFF; font-size: 12px; font-family: 'Verdana'; font-weight: normal; font-style: none; text-decoration: none; text-align: center; vertical-align: middle; display: table-cell; box-sizing: border-box; -webkit-box-sizing: border-box; -webkit-tap-highlight-color:rgba(0,0,0,0);]]></theme>
+    <theme type="button" name=".isy_grey_yes[state='1']"><![CDATA[padding: 0px 0px 0px 0px; background-image: url(Custom Isy\ISY_grey_yes.png); color: #FFFFFF; font-size: 12px; font-family: 'Verdana'; font-weight: normal; font-style: none; text-decoration: none; text-align: center; vertical-align: middle; display: table-cell; box-sizing: border-box; -webkit-box-sizing: border-box; -webkit-tap-highlight-color:rgba(0,0,0,0);]]></theme>
+    <theme type="button" name=".isy_grey_no[state='0']"><![CDATA[padding: 0px 0px 0px 0px; background-image: url(Custom Isy\ISY_grey_no.png); color: #FFFFFF; font-size: 12px; font-family: 'Verdana'; font-weight: normal; font-style: none; text-decoration: none; text-align: center; vertical-align: middle; display: table-cell; box-sizing: border-box; -webkit-box-sizing: border-box; -webkit-tap-highlight-color:rgba(0,0,0,0);]]></theme>
+    <theme type="button" name=".isy_grey_no[state='1']"><![CDATA[padding: 0px 0px 0px 0px; background-image: url(Custom Isy\ISY_grey_no.png); color: #FFFFFF; font-size: 12px; font-family: 'Verdana'; font-weight: normal; font-style: none; text-decoration: none; text-align: center; vertical-align: middle; display: table-cell; box-sizing: border-box; -webkit-box-sizing: border-box; -webkit-tap-highlight-color:rgba(0,0,0,0);]]></theme>
+  </themes>
+  <tokens>
+    <token name="[GarageDoor]" value="0" persist="1" />
+    <token name="[GarageLight]" value="0" persist="1" />
+    <token name="[Pump]" value="0" />
+  </tokens>
+  <page name="Startup" folder="" j="0" tags="" transition="fade" subtype="None" time="0.5" ease="easeInEaseOut" start="1">
+    <portrait t="ISY_background2_portrait">
+      <gesture name="New Gesture" type="swipe" direction="left" touches="1">
+        <action phase="begin" flip="Garage" command="securityPanelOff" />
+      </gesture>
+      <gesture name="New Gesture" type="swipe" direction="right" touches="1">
+        <action phase="begin" flip="MasterBR" command="securityPanelOff" />
+      </gesture>
+      <btn j="0" x="130" y="290" w="60" h="50" t="isy_grey_single" flip="None" sim="1" l="0" s="1" tags="" cmd="IS_all_off">
+        <inactive s="0">All
+Lights
+Off</inactive>
+        <active s="0">All
+Lights
+Off</active>
+      </btn>
+      <btn j="400" x="81" y="499" w="78" h="50" t="isy_grey_single" flip="FrontRoom" sim="0" l="1" s="1" tags="">
+        <inactive s="0">Front
+Room</inactive>
+        <active s="0">Front
+Room</active>
+      </btn>
+      <txt j="0" x="57" y="6" w="213" h="39" t="Large_C" wrap="False" l="0" tags="">ISY</txt>
+      <btn j="0" x="241" y="499" w="78" h="50" t="isy_grey_single" flip="MasterBR" sim="0" l="1" s="1" tags="">
+        <inactive s="0">Master
+Bedroom</inactive>
+        <active s="0">Master
+Bedroom</active>
+      </btn>
+      <btn j="0" x="81" y="445" w="78" h="50" t="isy_grey_single" flip="LivingRoom" sim="0" l="1" s="1" tags="">
+        <inactive s="0">Living
+Room</inactive>
+        <active s="0">Living
+Room</active>
+      </btn>
+      <btn j="0" x="161" y="499" w="78" h="50" t="isy_grey_single" flip="Kitchen" sim="0" l="1" s="1" tags="">
+        <inactive s="0">Kitchen</inactive>
+        <active s="0">Kitchen</active>
+      </btn>
+      <btn j="0" x="1" y="499" w="78" h="50" t="isy_grey_single" flip="Garage" sim="0" l="1" s="1" tags="">
+        <inactive s="0">Garage</inactive>
+        <active s="0">Garage</active>
+      </btn>
+      <btn j="0" x="161" y="445" w="78" h="50" t="isy_grey_single" flip="Office" sim="0" l="1" s="1" tags="">
+        <inactive s="0">Office</inactive>
+        <active s="0">Office</active>
+      </btn>
+      <btn j="0" x="1" y="445" w="78" h="50" t="isy_grey_single" flip="Entry" sim="0" l="1" s="1" tags="">
+        <inactive s="0">Entry</inactive>
+        <active s="0">Entry</active>
+      </btn>
+      <btn j="0" x="241" y="445" w="78" h="50" t="isy_grey_single" flip="Driveway" sim="0" l="1" s="1" tags="">
+        <inactive s="0">Driveway</inactive>
+        <active s="0">Driveway</active>
+      </btn>
+      <btn j="1005" x="130" y="154" w="60" h="50" t="isy_grey_sec" flip="None" sim="2" l="0" s="1" tags="">
+        <inactive s="0">Security</inactive>
+        <active s="0">Security</active>
+      </btn>
+      <subpage name="z_Security" x="0" y="220" j="2001" transition1="None" subtype1="None" time1="0" ease1="" transition2="None" subtype2="None" time2="0" ease2="" clickthrough="0" topmost="1" v="1" l="0" tags="" />
+      <subpage name="z_sec_arrive_conf" x="109" y="219" j="1004" transition1="None" subtype1="None" time1="0" ease1="" transition2="None" subtype2="None" time2="0" ease2="" clickthrough="0" topmost="1" v="1" l="0" tags="" />
+      <subpage name="z_sec_leave_conf" x="109" y="219" j="1003" transition1="None" subtype1="None" time1="0" ease1="" transition2="None" subtype2="None" time2="0" ease2="" clickthrough="0" topmost="1" v="1" l="0" tags="" />
+      <subpage name="z_conf_open" x="218" y="295" j="110" transition1="None" subtype1="None" time1="0" ease1="" transition2="None" subtype2="None" time2="0" ease2="" clickthrough="0" topmost="1" v="0" l="0" tags="" />
+      <subpage name="z_BI_conf" x="10" y="505" j="2001" transition1="None" subtype1="None" time1="0" ease1="" transition2="None" subtype2="None" time2="0" ease2="" clickthrough="0" topmost="1" v="1" l="0" tags="" />
+      <subpage name="z_Security" x="0" y="220" j="1005" transition1="None" subtype1="None" time1="0" ease1="" transition2="None" subtype2="None" time2="0" ease2="" clickthrough="0" topmost="0" v="0" l="0" tags="" />
+    </portrait>
+    <landscape />
+  </page>
+  <page name="Garage" folder="" j="0" tags="" transition="fade" subtype="None" time="0.5" ease="easeInEaseOut">
+    <portrait t="ISY_background2_portrait">
+      <gesture name="New Gesture" type="swipe" direction="left" touches="1">
+        <action phase="begin" flip="Driveway" command="securityPanelOff" />
+      </gesture>
+      <gesture name="New Gesture" type="swipe" direction="right" touches="1">
+        <action phase="begin" flip="Startup" command="securityPanelOff" />
+      </gesture>
+      <video x="0" y="40" w="320" h="180" j="0" play="0" stop="0" url="http://xxx.xxx.xxx.xxx:xxxx/mjpg/Cam5/video.mjpg" bgcolor="#808080" format="mjpeg" auth_user="user" auth_password="password" auth_realm="" auth_host="" auth_method="basic" auth_proxy="http" autoplay="1" tags="" />
+      <txt j="0" x="49" y="0" w="203" h="41" t="large_bold_l" wrap="False" l="1" tags="">Garage</txt>
+      <btn j="102" x="95" y="284" w="60" h="50" t="isy_grey_top" flip="None" sim="1" l="1" s="1" tags="" cmd="garageShopOn">
+        <inactive s="0">Shop
+Lights</inactive>
+        <active s="0">Shop
+Lights</active>
+      </btn>
+      <btn j="103" x="22" y="409" w="60" h="50" t="isy_grey_top" flip="None" sim="1" l="1" s="1" tags="" cmd="garagePPon">
+        <inactive s="0">Pool
+Pump</inactive>
+        <active s="0">Pool
+Pump</active>
+      </btn>
+      <btn j="0" x="285" y="7" w="26" h="21" t="isy_grey_home" flip="Startup" sim="1" l="0" s="1" tags="">
+        <inactive s="0">
+        </inactive>
+        <active s="0">
+        </active>
+      </btn>
+      <btn j="101" x="22" y="284" w="60" h="50" t="isy_grey_top" flip="None" sim="1" l="1" s="1" tags="" cmd="garageLightOn">
+        <inactive s="0">Garage
+Light</inactive>
+        <active s="0">Garage
+Light</active>
+      </btn>
+      <btn j="0" x="22" y="334" w="60" h="50" t="isy_grey_bot" flip="None" sim="1" l="1" s="1" tags="" cmd="garageLightOff">
+        <inactive s="0">Off</inactive>
+        <active s="0">Off</active>
+      </btn>
+      <btn j="0" x="22" y="459" w="60" h="50" t="isy_grey_bot" flip="None" sim="1" l="1" s="1" tags="" cmd="garagePPoff">
+        <inactive s="0">Off</inactive>
+        <active s="0">Off</active>
+      </btn>
+      <btn j="0" x="95" y="334" w="60" h="50" t="isy_grey_bot" flip="None" sim="1" l="1" s="1" tags="" cmd="garageShopOff">
+        <inactive s="0">Off</inactive>
+        <active s="0">Off</active>
+      </btn>
+    </portrait>
+    <landscape />
+  </page>
+  <page name="LivingRoom" folder="" j="0" tags="" transition="fade" subtype="None" time="0.5" ease="easeInEaseOut">
+    <portrait t="ISY_background2_portrait">
+      <gesture name="New Gesture" type="swipe" direction="left" touches="1">
+        <action phase="begin" flip="Kitchen" />
+      </gesture>
+      <gesture name="New Gesture" type="swipe" direction="right" touches="1">
+        <action phase="begin" flip="Entry" />
+      </gesture>
+      <btn j="0" x="130" y="480" w="60" h="50" t="isy_grey_bot" flip="None" sim="1" l="1" s="1" tags="" cmd="lr_Wall_Off">
+        <inactive s="0">Off</inactive>
+        <active s="0">Off</active>
+      </btn>
+      <video x="0" y="40" w="320" h="180" j="0" play="0" stop="0" url="http://xxx.xxx.xxx.xxx:xxxx/mjpg/Cam7/video.mjpg" bgcolor="" format="mjpeg" auth_user="user" auth_password="password" auth_realm="" auth_host="" auth_method="basic" auth_proxy="http" autoplay="1" tags="" />
+      <txt j="0" x="49" y="0" w="203" h="45" t="large_bold_l" wrap="False" l="1" tags="">Living Room</txt>
+      <btn j="0" x="284" y="7" w="26" h="21" t="isy_grey_home" flip="Startup" sim="1" l="1" s="1" tags="">
+        <inactive s="0">
+        </inactive>
+        <active s="0">
+        </active>
+      </btn>
+      <btn j="1002" x="124" y="247" w="72" h="43" t="isy_grey_single" flip="None" sim="2" l="1" s="1" tags="">
+        <actions>
+          <action>
+            <press delay="0" hold="0" repeat="0" command="avPanelOn" />
+          </action>
+        </actions>
+        <inactive s="0">AV Ctrl</inactive>
+        <active s="0">AV Ctrl</active>
+      </btn>
+      <btn j="205" x="240" y="336" w="50" h="50" t="isy_grey_center" flip="None" sim="2" l="0" s="1" tags="">
+        <inactive s="0">Med</inactive>
+        <active s="0">Med</active>
+      </btn>
+      <btn j="206" x="240" y="386" w="50" h="50" t="isy_grey_center" flip="None" sim="2" l="0" s="1" tags="">
+        <inactive s="0">Low</inactive>
+        <active s="0">Low</active>
+      </btn>
+      <btn j="207" x="240" y="436" w="50" h="50" t="isy_grey_center" flip="None" sim="2" l="0" s="1" tags="">
+        <inactive s="0">Off</inactive>
+        <active s="0">Off</active>
+      </btn>
+      <btn j="204" x="240" y="281" w="50" h="55" t="isy_grey_top" flip="None" sim="2" l="0" s="1" tags="">
+        <inactive s="0">High</inactive>
+        <active s="0">High</active>
+      </btn>
+      <btn j="0" x="130" y="430" w="60" h="50" t="isy_grey_top" flip="None" sim="1" l="1" s="1" tags="" cmd="lr_Wall_On">
+        <inactive s="0">Outlet</inactive>
+        <active s="0">Outlet</active>
+      </btn>
+      <btn j="201" x="17" y="290" w="65" h="60" t="isy_grey_top" flip="None" sim="1" l="1" s="1" tags="">
+        <actions>
+          <action>
+            <press delay="0" hold="0" repeat="0" command="lr_scene_MovieOn" />
+          </action>
+        </actions>
+        <inactive s="0">Movie
+Lights</inactive>
+        <active s="0">Movie
+Lights</active>
+      </btn>
+      <btn j="203" x="17" y="350" w="65" h="60" t="isy_grey_center" flip="None" sim="1" l="1" s="1" tags="">
+        <actions>
+          <action>
+            <press delay="0" hold="0" repeat="0" command="lr_scene_TvOn" />
+          </action>
+        </actions>
+        <inactive s="0">TV
+Lights</inactive>
+        <active s="0">TV
+Lights</active>
+      </btn>
+      <btn j="202" x="17" y="410" w="65" h="60" t="isy_grey_bot" flip="None" sim="1" l="1" s="1" tags="">
+        <actions>
+          <action>
+            <press delay="0" hold="0" repeat="0" command="lr_scene_MovieOff" />
+          </action>
+        </actions>
+        <inactive s="0">Lights
+Off</inactive>
+        <active s="0">Lights
+Off</active>
+      </btn>
+      <btn j="208" x="240" y="486" w="50" h="50" t="isy_grey_bot" flip="None" sim="2" l="0" s="1" tags="">
+        <actions>
+          <action>
+            <press delay="0" hold="0" repeat="0" command="lr_Fan_Bulb_On" />
+          </action>
+          <action>
+            <press delay="0" hold="0" repeat="0" command="lr_Fan_Bulb_Off" />
+          </action>
+        </actions>
+        <inactive s="0">Light</inactive>
+        <active s="0">Light</active>
+      </btn>
+      <subpage name="z_AVctrl" x="0" y="220" j="1002" transition1="None" subtype1="None" time1="0" ease1="" transition2="None" subtype2="None" time2="0" ease2="" clickthrough="0" topmost="1" v="0" l="0" tags="" />
+      <subpage name="z_Favorites" x="0" y="220" j="900" transition1="None" subtype1="None" time1="0" ease1="" transition2="None" subtype2="None" time2="0" ease2="" clickthrough="0" topmost="1" v="0" l="0" tags="" />
+      <btn j="0" x="53" y="501" w="40" h="40" t="isy_grey_right" flip="None" sim="1" l="0" s="1" tags="" cmd="lr_flampOff">
+        <inactive s="0">Off</inactive>
+        <active s="0">Off</active>
+      </btn>
+      <btn j="0" x="14" y="501" w="40" h="40" t="isy_grey_left" flip="None" sim="1" l="0" s="1" tags="" cmd="lr_flampOn">
+        <inactive s="0">On</inactive>
+        <active s="0">On</active>
+      </btn>
+    </portrait>
+    <landscape />
+  </page>
+  <page name="Entry" folder="" j="0" tags="" transition="fade" subtype="None" time="0.5" ease="easeInEaseOut">
+    <portrait t="ISY_background2_portrait">
+      <gesture name="New Gesture" type="swipe" direction="left" touches="1">
+        <action phase="begin" flip="LivingRoom" command="securityPanelOff" />
+      </gesture>
+      <gesture name="New Gesture" type="swipe" direction="right" touches="1">
+        <action phase="begin" flip="Driveway" command="securityPanelOff" />
+      </gesture>
+      <video x="0" y="40" w="320" h="240" j="0" play="0" stop="0" url="http://xxx.xxx.xxx.xxx:xxxx/mjpg/Cam4/video.mjpg" bgcolor="" format="mjpeg" auth_user="user" auth_password="password" auth_realm="" auth_host="" auth_method="basic" auth_proxy="http" tags="" />
+      <btn j="0" x="285" y="7" w="26" h="21" t="isy_grey_home" flip="Startup" sim="1" l="1" s="1" tags="">
+        <inactive s="0">
+        </inactive>
+        <active s="0">
+        </active>
+      </btn>
+      <txt j="0" x="49" y="0" w="203" h="41" t="large_bold_l" wrap="False" l="1" tags="">Entry</txt>
+      <btn j="305" x="91" y="337" w="50" h="50" t="isy_grey_top" flip="None" sim="1" l="1" s="1" tags="">
+        <inactive s="0">Lamp</inactive>
+        <active s="0">Lamp</active>
+      </btn>
+      <btn j="0" x="230" y="337" w="60" h="50" t="isy_grey_single" flip="None" sim="1" l="0" s="1" tags="">
+        <inactive s="0">Talk</inactive>
+        <active s="0">Talk</active>
+      </btn>
+      <btn j="303" x="31" y="336" w="50" h="50" t="isy_grey_top" flip="None" sim="1" l="1" s="1" tags="" cmd="entryCeilingOn">
+        <inactive s="0">Ceiling</inactive>
+        <active s="0">Ceiling</active>
+      </btn>
+      <btn j="301" x="71" y="491" w="60" h="50" t="isy_grey_left" flip="None" sim="1" l="1" s="1" tags="" cmd="entryLockDoor">
+        <inactive s="0">Lock</inactive>
+        <active s="0">Lock</active>
+      </btn>
+      <btn j="0" x="130" y="491" w="60" h="50" t="isy_grey_middle" flip="None" sim="1" l="1" s="1" tags="">
+        <actions>
+          <action>
+            <press delay="0" hold="0" repeat="0" command="entry_lock_query" />
+            <press delay="1000" hold="0" repeat="0" command="entry_lock_status" />
+            <press delay="1500" hold="0" repeat="0" command="entry_Unlock_status" />
+          </action>
+        </actions>
+        <inactive s="0">Status</inactive>
+        <active s="0">Status</active>
+      </btn>
+      <btn j="302" x="189" y="491" w="60" h="50" t="isy_grey_right" flip="None" sim="2" l="1" s="1" tags="">
+        <actions>
+          <action>
+            <press delay="0" hold="0" repeat="0" />
+          </action>
+        </actions>
+        <inactive s="0">Unloock</inactive>
+        <active s="0">Unloock</active>
+      </btn>
+      <btn j="304" x="151" y="337" w="50" h="50" t="isy_grey_top" flip="None" sim="1" l="1" s="1" tags="" cmd="entryPorchOn">
+        <inactive s="0">Porch
+Light</inactive>
+        <active s="0">Porch
+Light</active>
+      </btn>
+      <btn j="0" x="151" y="387" w="50" h="50" t="isy_grey_bot" flip="None" sim="1" l="1" s="1" tags="" cmd="entryPorchOff">
+        <inactive s="0">Off</inactive>
+        <active s="0">Off</active>
+      </btn>
+      <btn j="0" x="91" y="387" w="50" h="50" t="isy_grey_bot" flip="None" sim="1" l="1" s="1" tags="">
+        <inactive s="0">Off</inactive>
+        <active s="0">Off</active>
+      </btn>
+      <btn j="0" x="31" y="386" w="50" h="50" t="isy_grey_bot" flip="None" sim="1" l="1" s="1" tags="" cmd="entryCeilingOff">
+        <inactive s="0">Off</inactive>
+        <active s="0">Off</active>
+      </btn>
+      <subpage name="z_door_lock_conf" x="0" y="468" j="302" transition1="None" subtype1="None" time1="0" ease1="" transition2="None" subtype2="None" time2="0" ease2="" clickthrough="0" topmost="0" v="0" l="0" tags="" />
+    </portrait>
+    <landscape />
+  </page>
+  <page name="Kitchen" folder="" j="0" tags="" transition="fade" subtype="None" time="0.5" ease="easeInEaseOut">
+    <portrait t="ISY_background2_portrait">
+      <gesture name="New Gesture" type="swipe" direction="left" touches="1">
+        <action phase="begin" flip="Office" />
+      </gesture>
+      <gesture name="New Gesture" type="swipe" direction="right" touches="1">
+        <action phase="begin" flip="LivingRoom" />
+      </gesture>
+      <video x="0" y="40" w="320" h="180" j="0" play="0" stop="0" url="http://xxx.xxx.xxx.xxx:xxxx/mjpg/Cam6/video.mjpg" bgcolor="" format="mjpeg" auth_user="user" auth_password="password" auth_realm="" auth_host="" auth_method="basic" auth_proxy="http" autoplay="1" tags="" />
+      <btn j="0" x="285" y="5" w="26" h="21" t="isy_grey_home" flip="Startup" sim="1" l="1" s="1" tags="">
+        <inactive s="0">
+        </inactive>
+        <active s="0">
+        </active>
+      </btn>
+      <txt j="0" x="49" y="0" w="203" h="45" t="large_bold_l" wrap="False" l="1" tags="">Kitchen</txt>
+      <btn j="403" x="95" y="414" w="60" h="50" t="isy_grey_top" flip="None" sim="1" l="1" s="1" tags="" cmd="kitchen_tableOn">
+        <inactive s="0">Table</inactive>
+        <active s="0">Table</active>
+      </btn>
+      <btn j="407" x="218" y="346" w="60" h="50" t="isy_grey_single" flip="None" sim="1" l="1" s="1" tags="">
+        <actions>
+          <action>
+            <press delay="0" hold="0" repeat="0" command="lr_scene_MovieOn" />
+          </action>
+        </actions>
+        <inactive s="0">Movie</inactive>
+        <active s="0">Movie</active>
+      </btn>
+      <btn j="406" x="218" y="294" w="60" h="50" t="isy_grey_single" flip="None" sim="1" l="1" s="1" tags="">
+        <actions>
+          <action>
+            <press delay="0" hold="0" repeat="0" command="kitchen_lightsOn" />
+          </action>
+          <action>
+            <press delay="0" hold="0" repeat="0" command="kitchen_lightsOff" />
+          </action>
+        </actions>
+        <inactive s="0">Kitchen
+Lights</inactive>
+        <active s="0">Kitchen
+Lights</active>
+      </btn>
+      <btn j="401" x="20" y="294" w="60" h="50" t="isy_grey_top" flip="None" sim="1" l="1" s="1" tags="" cmd="kitchen_countersOn">
+        <inactive s="0">Counters</inactive>
+        <active s="0">Counters</active>
+      </btn>
+      <btn j="402" x="20" y="414" w="60" h="50" t="isy_grey_top" flip="None" sim="1" l="1" s="1" tags="" cmd="kitchen_sinkOn">
+        <inactive s="0">Sink</inactive>
+        <active s="0">Sink</active>
+      </btn>
+      <btn j="405" x="95" y="294" w="60" h="50" t="isy_grey_top" flip="None" sim="2" l="1" s="1" tags="" cmd="kitchen_fanOn">
+        <inactive s="0">Fan</inactive>
+        <active s="0">Fan</active>
+      </btn>
+      <btn j="401" x="20" y="344" w="60" h="50" t="isy_grey_bot" flip="None" sim="1" l="1" s="1" tags="" cmd="kitchen_countersOff">
+        <inactive s="0">Off</inactive>
+        <active s="0">Off</active>
+      </btn>
+      <btn j="402" x="20" y="464" w="60" h="50" t="isy_grey_bot" flip="None" sim="1" l="1" s="1" tags="" cmd="kitchen_sinkOff">
+        <inactive s="0">Off</inactive>
+        <active s="0">Off</active>
+      </btn>
+      <btn j="403" x="95" y="464" w="60" h="50" t="isy_grey_bot" flip="None" sim="1" l="1" s="1" tags="" cmd="kitchen_tableOff">
+        <inactive s="0">Off</inactive>
+        <active s="0">Off</active>
+      </btn>
+      <btn j="0" x="95" y="344" w="60" h="50" t="isy_grey_bot" flip="None" sim="0" l="1" s="1" tags="" cmd="kitchen_fanOff">
+        <inactive s="0">Off</inactive>
+        <active s="0">Off</active>
+      </btn>
+    </portrait>
+    <landscape />
+  </page>
+  <page name="Office" folder="" j="0" tags="" transition="fade" subtype="None" time="0.5" ease="easeInEaseOut">
+    <portrait t="ISY_background2_portrait">
+      <gesture name="New Gesture" type="swipe" direction="left" touches="1">
+        <action phase="begin" flip="FrontRoom" />
+      </gesture>
+      <gesture name="New Gesture" type="swipe" direction="right" touches="1">
+        <action phase="begin" flip="Kitchen" />
+      </gesture>
+      <video x="0" y="40" w="320" h="185" j="0" play="0" stop="0" url="http://xxx.xxx.xxx.xxx:xxxx/mjpg/Cam9/video.mjpg" bgcolor="" format="mjpeg" auth_user="user" auth_password="password" auth_realm="" auth_host="" auth_method="basic" auth_proxy="http" autoplay="1" tags="" />
+      <txt j="0" x="49" y="0" w="203" h="45" t="large_bold_l" wrap="False" l="1" tags="">Office</txt>
+      <btn j="802" x="35" y="300" w="62" h="50" t="isy_grey_top" flip="None" sim="1" l="0" s="1" tags="">
+        <actions>
+          <action>
+            <press delay="0" hold="0" repeat="0" command="office_ceilingOn" />
+          </action>
+        </actions>
+        <inactive s="0">
+Ceiling
+On
+</inactive>
+        <active s="0">
+Ceiling
+On
+</active>
+      </btn>
+      <btn j="803" x="226" y="300" w="70" h="50" t="isy_grey_single" flip="None" sim="1" l="0" s="1" tags="">
+        <inactive s="0">Fan</inactive>
+        <active s="0">Fan</active>
+      </btn>
+      <btn j="0" x="285" y="7" w="26" h="21" t="isy_grey_home" flip="Startup" sim="1" l="1" s="1" tags="">
+        <inactive s="0">
+        </inactive>
+        <active s="0">
+        </active>
+      </btn>
+      <btn j="0" x="35" y="350" w="62" h="50" t="isy_grey_bot" flip="None" sim="1" l="0" s="1" tags="" cmd="office_ceilingOff">
+        <inactive s="0">Off</inactive>
+        <active s="0">Off</active>
+      </btn>
+    </portrait>
+    <landscape />
+  </page>
+  <page name="FrontRoom" folder="" j="0" tags="" transition="fade" subtype="None" time="0.5" ease="easeInEaseOut">
+    <portrait t="ISY_background2_portrait">
+      <gesture name="New Gesture" type="swipe" direction="left" touches="1">
+        <action phase="begin" flip="MasterBR" />
+      </gesture>
+      <gesture name="New Gesture" type="swipe" direction="right" touches="1">
+        <action phase="begin" flip="Office" />
+      </gesture>
+      <video x="0" y="40" w="320" h="180" j="0" play="0" stop="0" url="http://xxx.xxx.xxx.xxx:xxxx/mjpg/Cam8/video.mjpg" bgcolor="#808080" format="mjpeg" auth_user="user" auth_password="password" auth_realm="" auth_host="" auth_method="basic" auth_proxy="http" autoplay="1" tags="" />
+      <txt j="0" x="49" y="0" w="203" h="45" t="large_bold_l" wrap="False" l="1" tags="">Front Room</txt>
+      <btn j="0" x="285" y="7" w="26" h="21" t="isy_grey_home" flip="Startup" sim="1" l="1" s="1" tags="">
+        <inactive s="0">
+        </inactive>
+        <active s="0">
+        </active>
+      </btn>
+      <btn j="501" x="23" y="290" w="50" h="50" t="isy_grey_top" flip="None" sim="1" l="1" s="1" tags="" cmd="frontroom_ceilingOn">
+        <inactive s="0">Ceiling
+Lights</inactive>
+        <active s="0">Ceiling
+Lights</active>
+      </btn>
+      <btn j="502" x="217" y="290" w="70" h="50" t="isy_grey_single" flip="None" sim="2" l="1" s="1" tags="">
+        <actions>
+          <action>
+            <press delay="0" hold="0" repeat="0" />
+          </action>
+          <action>
+            <press delay="0" hold="0" repeat="0" />
+          </action>
+        </actions>
+        <inactive s="0">LampLinc</inactive>
+        <active s="0">LampLinc</active>
+      </btn>
+      <btn j="0" x="23" y="340" w="50" h="50" t="isy_grey_bot" flip="None" sim="1" l="0" s="1" tags="" cmd="frontroom_ceilingOff">
+        <inactive s="0">Off</inactive>
+        <active s="0">Off</active>
+      </btn>
+    </portrait>
+    <landscape />
+  </page>
+  <page name="MasterBR" folder="" j="0" tags="" transition="fade" subtype="None" time="0.5" ease="easeInEaseOut">
+    <portrait t="ISY_background2_portrait">
+      <gesture name="New Gesture" type="swipe" direction="left" touches="1">
+        <action phase="begin" flip="Startup" />
+      </gesture>
+      <gesture name="New Gesture" type="swipe" direction="right" touches="1">
+        <action phase="begin" flip="FrontRoom" />
+      </gesture>
+      <video x="0" y="40" w="320" h="180" j="0" play="0" stop="0" url="http://xxx.xxx.xxx.xxx:xxxx/mjpg/Cam10/video.mjpg" bgcolor="#808080" format="mjpeg" auth_user="user" auth_password="password" auth_realm="" auth_host="" auth_method="basic" auth_proxy="http" autoplay="1" tags="" />
+      <txt j="0" x="49" y="0" w="203" h="45" t="large_bold_l" wrap="False" l="1" tags="">Master Bedroom</txt>
+      <btn j="0" x="285" y="7" w="26" h="21" t="isy_grey_home" flip="Startup" sim="1" l="1" s="1" tags="">
+        <inactive s="0">
+        </inactive>
+        <active s="0">
+        </active>
+      </btn>
+      <btn j="702" x="90" y="419" w="50" h="50" t="isy_grey_top" flip="None" sim="1" l="1" s="1" tags="" cmd="mbr_FloorLampOn">
+        <inactive s="0">Floor
+Lamp</inactive>
+        <active s="0">Floor
+Lamp</active>
+      </btn>
+      <btn j="703" x="20" y="419" w="50" h="50" t="isy_grey_top" flip="None" sim="1" l="1" s="1" tags="" cmd="mbr_FoyerOn">
+        <inactive s="0">Foyer</inactive>
+        <active s="0">Foyer</active>
+      </btn>
+      <btn j="701" x="160" y="419" w="50" h="50" t="isy_grey_top" flip="None" sim="1" l="1" s="1" tags="" cmd="mbr_BedsideLampOn">
+        <inactive s="0">Bedside
+Lamp</inactive>
+        <active s="0">Bedside
+Lamp</active>
+      </btn>
+      <btn j="709" x="254" y="465" w="50" h="40" t="isy_grey_bulb" flip="None" sim="2" l="1" s="1" tags="">
+        <inactive s="0">
+        </inactive>
+        <active s="0">
+        </active>
+      </btn>
+      <btn j="706" x="254" y="310" w="50" h="50" t="isy_grey_center" flip="None" sim="2" l="1" s="1" tags="">
+        <inactive s="0">Med</inactive>
+        <active s="0">Med</active>
+      </btn>
+      <btn j="707" x="254" y="360" w="50" h="50" t="isy_grey_center" flip="None" sim="2" l="1" s="1" tags="">
+        <inactive s="0">Low</inactive>
+        <active s="0">Low</active>
+      </btn>
+      <btn j="708" x="254" y="410" w="50" h="50" t="isy_grey_bot" flip="None" sim="2" l="1" s="1" tags="">
+        <inactive s="0">Off</inactive>
+        <active s="0">Off</active>
+      </btn>
+      <btn j="705" x="254" y="260" w="50" h="50" t="isy_grey_top" flip="None" sim="2" l="1" s="1" tags="">
+        <inactive s="0">Hi</inactive>
+        <active s="0">Hi</active>
+      </btn>
+      <btn j="704" x="20" y="260" w="55" h="52" t="isy_grey_top" flip="None" sim="1" l="1" s="1" tags="" cmd="mbr_LightsOn">
+        <inactive s="0">Bedroom
+Lights</inactive>
+        <active s="0">Bedroom
+Lights</active>
+      </btn>
+      <btn j="0" x="20" y="469" w="50" h="50" t="isy_grey_bot" flip="None" sim="1" l="1" s="1" tags="" cmd="mbr_FoyerOff">
+        <inactive s="0">Off</inactive>
+        <active s="0">Off</active>
+      </btn>
+      <btn j="0" x="160" y="469" w="50" h="50" t="isy_grey_bot" flip="None" sim="1" l="1" s="1" tags="" cmd="mbr_BedsideLampOff">
+        <inactive s="0">Off</inactive>
+        <active s="0">Off</active>
+      </btn>
+      <btn j="0" x="90" y="469" w="50" h="50" t="isy_grey_bot" flip="None" sim="1" l="1" s="1" tags="" cmd="mbr_FloorLampOff">
+        <inactive s="0">Off</inactive>
+        <active s="0">Off</active>
+      </btn>
+      <btn j="0" x="20" y="310" w="55" h="50" t="isy_grey_bot" flip="None" sim="1" l="1" s="1" tags="" cmd="mbr_LightsOff">
+        <inactive s="0">Off</inactive>
+        <active s="0">Off</active>
+      </btn>
+    </portrait>
+    <landscape />
+  </page>
+  <page name="Driveway" folder="" j="0" tags="" transition="fade" subtype="None" time="0.5" ease="easeInEaseOut">
+    <portrait t="ISY_background2_portrait">
+      <gesture name="New Gesture" type="swipe" direction="left" touches="1">
+        <action phase="begin" flip="Entry" command="securityPanelOff" />
+      </gesture>
+      <gesture name="New Gesture" type="swipe" direction="right" touches="1">
+        <action phase="begin" flip="Garage" command="securityPanelOff" />
+      </gesture>
+      <video x="0" y="41" w="320" h="180" j="0" play="0" stop="0" url="http://xxx.xxx.xxx.xxx:xxxx/mjpg/Cam1/video.mjpg" bgcolor="#808080" format="mjpeg" auth_user="user" auth_password="password" auth_realm="" auth_host="" auth_method="basic" auth_proxy="http" autoplay="1" tags="" />
+      <video x="0" y="226" w="320" h="180" j="0" play="0" stop="0" url="http://xxx.xxx.xxx.xxx:xxxx/mjpg/Cam2/video.mjpg" bgcolor="#808080" format="mjpeg" auth_user="user" auth_password="password" auth_realm="" auth_host="" auth_method="basic" auth_proxy="http" autoplay="1" tags="" />
+      <txt j="0" x="49" y="0" w="203" h="41" t="large_bold_l" wrap="False" l="1" tags="">Driveway</txt>
+      <btn j="0" x="285" y="7" w="26" h="21" t="isy_grey_home" flip="Startup" sim="1" l="1" s="1" tags="">
+        <inactive s="0">
+        </inactive>
+        <active s="0">
+        </active>
+      </btn>
+      <btn j="602" x="130" y="437" w="60" h="50" t="isy_grey_top" flip="None" sim="1" l="0" s="1" tags="" cmd="garageDrivewayOn">
+        <inactive s="0">Driveway
+Lights</inactive>
+        <active s="0">Driveway
+Lights</active>
+      </btn>
+      <btn j="0" x="130" y="487" w="60" h="50" t="isy_grey_bot" flip="None" sim="1" l="0" s="1" tags="" cmd="garageDrivewayOff">
+        <inactive s="0">Off</inactive>
+        <active s="0">Off</active>
+      </btn>
+    </portrait>
+    <landscape />
+  </page>
+  <subpage name="z_RoomsMenu" folder="" w="320" h="190" clip="1" t="ISY_background2_portrait">
+    <btn j="0" x="81" y="69" w="78" h="50" t="isy_grey_single" flip="FrontRoom" sim="0" l="1" s="1" tags="">
+      <actions>
+        <action>
+          <press delay="0" hold="0" repeat="0" command="avPanelOff" />
+        </action>
+      </actions>
+      <inactive s="0">Front
+Room</inactive>
+      <active s="0">Front
+Room</active>
+    </btn>
+    <btn j="0" x="241" y="69" w="78" h="50" t="isy_grey_single" flip="MasterBR" sim="0" l="1" s="1" tags="">
+      <actions>
+        <action>
+          <press delay="0" hold="0" repeat="0" command="avPanelOff" />
+        </action>
+      </actions>
+      <inactive s="0">Master
+Bedroom</inactive>
+      <active s="0">Master
+Bedroom</active>
+    </btn>
+    <btn j="0" x="161" y="69" w="78" h="50" t="isy_grey_single" flip="Kitchen" sim="0" l="1" s="1" tags="">
+      <actions>
+        <action>
+          <press delay="0" hold="0" repeat="0" command="avPanelOff" />
+        </action>
+      </actions>
+      <inactive s="0">Kitchen</inactive>
+      <active s="0">Kitchen</active>
+    </btn>
+    <btn j="0" x="1" y="69" w="78" h="50" t="isy_grey_single" flip="Entry" sim="0" l="1" s="1" tags="">
+      <actions>
+        <action>
+          <press delay="0" hold="0" repeat="0" command="avPanelOff" />
+        </action>
+      </actions>
+      <inactive s="0">Entry</inactive>
+      <active s="0">Entry</active>
+    </btn>
+    <btn j="0" x="81" y="123" w="78" h="50" t="isy_grey_single" flip="LivingRoom" sim="0" l="1" s="1" tags="">
+      <actions>
+        <action>
+          <press delay="0" hold="0" repeat="0" command="avPanelOff" />
+        </action>
+      </actions>
+      <inactive s="0">Living
+Room</inactive>
+      <active s="0">Living
+Room</active>
+    </btn>
+    <btn j="0" x="1" y="123" w="78" h="50" t="isy_grey_single" flip="Garage" sim="0" l="1" s="1" tags="">
+      <actions>
+        <action>
+          <press delay="0" hold="0" repeat="0" command="avPanelOff" />
+        </action>
+      </actions>
+      <inactive s="0">Garage</inactive>
+      <active s="0">Garage</active>
+    </btn>
+    <btn j="0" x="161" y="123" w="78" h="50" t="isy_grey_single" flip="Office" sim="0" l="1" s="1" tags="">
+      <actions>
+        <action>
+          <press delay="0" hold="0" repeat="0" command="avPanelOff" />
+        </action>
+      </actions>
+      <inactive s="0">Office</inactive>
+      <active s="0">Office</active>
+    </btn>
+    <btn j="0" x="241" y="123" w="78" h="50" t="isy_grey_single" flip="Driveway" sim="0" l="1" s="1" tags="">
+      <actions>
+        <action>
+          <press delay="0" hold="0" repeat="0" command="avPanelOff" />
+        </action>
+      </actions>
+      <inactive s="0">Driveway</inactive>
+      <active s="0">Driveway</active>
+    </btn>
+    <btn j="0" x="120" y="16" w="80" h="50" t="isy_grey_single" flip="Startup" sim="0" l="1" s="1" tags="">
+      <actions>
+        <action>
+          <press delay="0" hold="0" repeat="0" command="avPanelOff" />
+        </action>
+      </actions>
+      <inactive s="0">Home</inactive>
+      <active s="0">Home</active>
+    </btn>
+  </subpage>
+  <subpage name="z_AVctrl" folder="" w="320" h="345" clip="1" t="ISY_background2_portrait">
+    <btn j="0" x="262" y="232" w="50" h="52" t="isy_grey_center" flip="None" sim="1" l="1" s="1" tags="" cmd="av_ChanelDown">
+      <inactive s="0">Ch
+-</inactive>
+      <active s="0">Ch
+-</active>
+    </btn>
+    <btn j="0" x="262" y="180" w="50" h="52" t="isy_grey_top" flip="None" sim="1" l="1" s="1" tags="" cmd="av_ChanelUp">
+      <inactive s="0">+
+Ch</inactive>
+      <active s="0">+
+Ch</active>
+    </btn>
+    <btn j="1002" x="12" y="8" w="60" h="50" t="isy_grey_single" flip="None" sim="1" l="1" s="1" tags="" cmd="avPanelOff">
+      <inactive s="0">Done</inactive>
+      <active s="0">Done</active>
+    </btn>
+    <btn j="0" x="262" y="113" w="50" h="52" t="isy_grey_bot" flip="None" sim="1" l="1" s="1" tags="" cmd="VolumeDown">
+      <inactive s="0">Vol
+-</inactive>
+      <active s="0">Vol
+-</active>
+    </btn>
+    <btn j="0" x="262" y="9" w="50" h="52" t="isy_grey_top" flip="None" sim="1" l="1" s="1" tags="" cmd="VolumeUp">
+      <inactive s="0">Vol
++</inactive>
+      <active s="0">Vol
++</active>
+    </btn>
+    <btn j="251" x="15" y="96" w="54" h="54" t="isy_grey_top" flip="None" sim="1" l="1" s="1" tags="" cmd="av_lr_FireTV">
+      <inactive s="0">Fire
+TV</inactive>
+      <active s="0">Fire
+TV</active>
+    </btn>
+    <btn j="252" x="15" y="150" w="54" h="54" t="isy_grey_center" flip="None" sim="1" l="1" s="1" tags="" cmd="av_lr_TV">
+      <inactive s="0">TV</inactive>
+      <active s="0">TV</active>
+    </btn>
+    <btn j="0" x="139" y="72" w="50" h="50" t="isy_grey_single" flip="None" sim="1" l="1" s="1" tags="" cmd="av_TV_2">
+      <inactive s="0">2</inactive>
+      <active s="0">2</active>
+    </btn>
+    <btn j="0" x="86" y="72" w="50" h="50" t="isy_grey_single" flip="None" sim="1" l="1" s="1" tags="" cmd="av_TV_1">
+      <inactive s="0">1</inactive>
+      <active s="0">1</active>
+    </btn>
+    <btn j="0" x="192" y="72" w="50" h="50" t="isy_grey_single" flip="None" sim="1" l="1" s="1" tags="" cmd="av_TV_3">
+      <inactive s="0">3</inactive>
+      <active s="0">3</active>
+    </btn>
+    <btn j="0" x="139" y="126" w="50" h="50" t="isy_grey_single" flip="None" sim="1" l="1" s="1" tags="" cmd="av_TV_5">
+      <inactive s="0">5</inactive>
+      <active s="0">5</active>
+    </btn>
+    <btn j="0" x="86" y="125" w="50" h="50" t="isy_grey_single" flip="None" sim="1" l="1" s="1" tags="" cmd="av_TV_4">
+      <inactive s="0">4</inactive>
+      <active s="0">4</active>
+    </btn>
+    <btn j="0" x="192" y="125" w="50" h="50" t="isy_grey_single" flip="None" sim="1" l="1" s="1" tags="" cmd="av_TV_6">
+      <inactive s="0">6</inactive>
+      <active s="0">6</active>
+    </btn>
+    <btn j="0" x="139" y="179" w="50" h="50" t="isy_grey_single" flip="None" sim="1" l="1" s="1" tags="" cmd="av_TV_8">
+      <inactive s="0">8</inactive>
+      <active s="0">8</active>
+    </btn>
+    <btn j="0" x="86" y="178" w="50" h="50" t="isy_grey_single" flip="None" sim="1" l="1" s="1" tags="" cmd="av_TV_7">
+      <inactive s="0">7</inactive>
+      <active s="0">7</active>
+    </btn>
+    <btn j="0" x="192" y="178" w="50" h="50" t="isy_grey_single" flip="None" sim="1" l="1" s="1" tags="" cmd="av_TV_9">
+      <inactive s="0">9</inactive>
+      <active s="0">9</active>
+    </btn>
+    <btn j="0" x="130" y="284" w="70" h="50" t="isy_grey_single" flip="None" sim="1" l="1" s="1" tags="" cmd="av_TV_Enter">
+      <inactive s="0">Enter</inactive>
+      <active s="0">Enter</active>
+    </btn>
+    <btn j="0" x="139" y="231" w="50" h="50" t="isy_grey_single" flip="None" sim="1" l="1" s="1" tags="" cmd="av_TV_0">
+      <inactive s="0">0</inactive>
+      <active s="0">0</active>
+    </btn>
+    <btn j="0" x="86" y="231" w="50" h="50" t="isy_grey_single" flip="None" sim="1" l="1" s="1" tags="" cmd="av_TV_Astrisk">
+      <inactive s="0">*</inactive>
+      <active s="0">*</active>
+    </btn>
+    <btn j="0" x="192" y="231" w="50" h="50" t="isy_grey_single" flip="None" sim="1" l="1" s="1" tags="">
+      <inactive s="0">#</inactive>
+      <active s="0">#</active>
+    </btn>
+    <btn j="900" x="133" y="8" w="62" h="50" t="isy_grey_single" flip="None" sim="2" l="1" s="1" tags="">
+      <actions>
+        <action>
+          <press delay="0" hold="0" repeat="0" command="avFavoritesOn" />
+        </action>
+      </actions>
+      <inactive s="0">Favorites</inactive>
+      <active s="0">Favorites</active>
+    </btn>
+    <btn j="0" x="262" y="61" w="50" h="52" t="isy_grey_center" flip="None" sim="1" l="1" s="1" tags="">
+      <actions>
+        <action>
+          <press delay="0" hold="0" repeat="0" command="MuteOn" />
+        </action>
+        <action>
+          <press delay="0" hold="0" repeat="0" command="MuteOff" />
+        </action>
+      </actions>
+      <inactive s="0">Mute</inactive>
+      <active s="0">Mute</active>
+    </btn>
+    <btn j="0" x="262" y="284" w="50" h="52" t="isy_grey_bot" flip="None" sim="1" l="1" s="1" tags="" cmd="av_Ret">
+      <inactive s="0">Return</inactive>
+      <active s="0">Return</active>
+    </btn>
+    <btn j="0" x="15" y="204" w="54" h="54" t="isy_grey_bot" flip="None" sim="0" l="1" s="1" tags="" cmd="av_lr_AV_off">
+      <inactive s="0">AV
+Off</inactive>
+      <active s="0">AV
+Off</active>
+    </btn>
+  </subpage>
+  <subpage name="z_sec_arrive_conf" folder="" w="200" h="80" clip="0">
+    <btn j="0" x="25" y="25" w="50" h="50" t="isy_grey_yes" flip="None" sim="1" l="0" s="1" tags="">
+      <actions>
+        <action>
+          <press delay="0" hold="0" repeat="0" command="securityArrive" />
+          <press delay="500" hold="0" repeat="0" command="securityArriveConfOff" />
+          <press delay="750" hold="0" repeat="0" command="securityPanelOff" />
+        </action>
+      </actions>
+      <inactive s="0">
+      </inactive>
+      <active s="0">
+      </active>
+    </btn>
+    <btn j="0" x="125" y="25" w="50" h="50" t="isy_grey_no" flip="None" sim="1" l="0" s="1" tags="">
+      <actions>
+        <action>
+          <press delay="0" hold="0" repeat="0" command="securityArriveConfOff" />
+        </action>
+      </actions>
+      <inactive s="0">
+      </inactive>
+      <active s="0">
+      </active>
+    </btn>
+    <txt j="0" x="0" y="0" w="200" h="23" t="grey_bold_c" wrap="False" l="0" tags="">Confirm - Arrive</txt>
+  </subpage>
+  <subpage name="z_sec_leave_conf" folder="" w="200" h="80" clip="1">
+    <txt j="0" x="0" y="0" w="200" h="23" t="grey_bold_c" wrap="False" l="0" tags="">Confirm - Leave</txt>
+    <btn j="0" x="25" y="25" w="50" h="50" t="isy_grey_yes" flip="None" sim="1" l="0" s="1" tags="">
+      <actions>
+        <action>
+          <press delay="0" hold="0" repeat="0" command="securityLeave" />
+          <press delay="500" hold="0" repeat="0" command="securityLeaveConfOff" />
+          <press delay="750" hold="0" repeat="0" command="securityPanelOff" />
+        </action>
+      </actions>
+      <inactive s="0">
+      </inactive>
+      <active s="0">
+      </active>
+    </btn>
+    <btn j="0" x="125" y="25" w="50" h="50" t="isy_grey_no" flip="None" sim="1" l="0" s="1" tags="">
+      <actions>
+        <action>
+          <press delay="0" hold="0" repeat="0" command="securityLeaveConfOff" />
+        </action>
+      </actions>
+      <inactive s="0">
+      </inactive>
+      <active s="0">
+      </active>
+    </btn>
+  </subpage>
+  <subpage name="z_Security" folder="" w="320" h="348" clip="1" t="ISY_background2_portrait">
+    <gesture name="New Gesture" type="swipe" direction="up" touches="1">
+      <action phase="begin" command="securityPanelOff" />
+    </gesture>
+    <btn j="108" x="134" y="23" w="50" h="50" t="isy_grey_single" flip="None" sim="1" l="0" s="1" tags="" cmd="securityLeaveConfOn">
+      <inactive s="0">Leave</inactive>
+      <active s="0">Leave</active>
+    </btn>
+    <btn j="109" x="235" y="23" w="50" h="50" t="isy_grey_single" flip="None" sim="1" l="0" s="1" tags="" cmd="securityArriveConfOn">
+      <inactive s="0">Arrive</inactive>
+      <active s="0">Arrive</active>
+    </btn>
+    <btn j="0" x="18" y="40" w="54" h="54" t="isy_grey_single" flip="None" sim="1" l="0" s="1" tags="" cmd="security_Set_4">
+      <inactive s="0">4</inactive>
+      <active s="0">4</active>
+    </btn>
+    <btn j="0" x="18" y="99" w="54" h="54" t="isy_grey_single" flip="None" sim="1" l="0" s="1" tags="" cmd="security_Set_3">
+      <inactive s="0">3</inactive>
+      <active s="0">3</active>
+    </btn>
+    <btn j="0" x="18" y="158" w="54" h="54" t="isy_grey_single" flip="None" sim="1" l="0" s="1" tags="" cmd="security_Set_2">
+      <inactive s="0">2</inactive>
+      <active s="0">2</active>
+    </btn>
+    <btn j="0" x="18" y="217" w="54" h="54" t="isy_grey_single" flip="None" sim="1" l="0" s="1" tags="" cmd="security_Set_1">
+      <inactive s="0">1</inactive>
+      <active s="0">1</active>
+    </btn>
+    <btn j="0" x="173" y="285" w="100" h="50" t="isy_grey_single" flip="None" sim="0" l="0" s="1" tags="" cmd="securityPanelOff">
+      <inactive s="0">Done</inactive>
+      <active s="0">Done</active>
+    </btn>
+    <btn j="104" x="130" y="171" w="60" h="50" t="isy_grey_top" flip="None" sim="1" l="0" s="1" tags="" cmd="garageSirenOn">
+      <inactive s="0">Garage
+Siren</inactive>
+      <active s="0">Garage
+Siren</active>
+    </btn>
+    <btn j="0" x="130" y="221" w="60" h="50" t="isy_grey_bot" flip="None" sim="1" l="0" s="1" tags="" cmd="garageSirenOff">
+      <inactive s="0">Off</inactive>
+      <active s="0">Off</active>
+    </btn>
+    <btn j="0" x="130" y="106" w="60" h="50" t="isy_grey_sec" flip="None" sim="1" l="0" s="1" tags="">
+      <actions>
+        <action>
+          <press delay="0" hold="0" repeat="0" command="sec_Deadman" />
+          <press delay="50" hold="0" repeat="0" command="securityPanelOff" />
+        </action>
+      </actions>
+      <inactive s="0">Deadman
+Reset</inactive>
+      <active s="0">Deadman
+Reset</active>
+    </btn>
+    <btn j="106" x="229" y="171" w="60" h="50" t="isy_grey_center" flip="None" sim="2" l="0" s="0" tags="">
+      <actions>
+        <action>
+          <press delay="0" hold="0" repeat="0" command="garageStop" />
+          <press delay="0" hold="0" repeat="0" command="garageDoorDownOff" />
+          <press delay="0" hold="0" repeat="0" command="garageDoorUpOff" />
+        </action>
+      </actions>
+      <inactive s="0">Overhead
+S/S</inactive>
+      <active s="0">STOP / START</active>
+    </btn>
+    <btn j="107" x="229" y="221" w="60" h="50" t="isy_grey_bot" flip="None" sim="2" l="0" s="0" tags="">
+      <actions>
+        <action>
+          <press delay="0" hold="0" repeat="0" command="garageClose" />
+          <press delay="15000" hold="0" repeat="0" command="garageDoorDownOff" />
+        </action>
+      </actions>
+      <inactive s="0">Close</inactive>
+      <active s="4">Closing</active>
+    </btn>
+    <btn j="105" x="229" y="121" w="60" h="50" t="isy_grey_top" flip="None" sim="2" l="0" s="0" tags="">
+      <actions>
+        <action>
+          <press delay="0" hold="0" repeat="0" command="ConfOpenOn" />
+        </action>
+      </actions>
+      <inactive s="0">Open</inactive>
+      <active s="0">Opening</active>
+    </btn>
+    <txt j="0" x="8" y="23" w="75" h="15" t="small_bold_c_1" wrap="False" l="0" tags="">Sec Level</txt>
+    <btn j="2001" x="53" y="285" w="65" h="50" t="isy_grey_single" flip="None" sim="0" l="0" s="1" tags="" cmd="securityBIConfOn">
+      <inactive s="0">BI
+Reboot</inactive>
+      <active s="0">BI
+Reboot</active>
+    </btn>
+  </subpage>
+  <subpage name="z_Favorites" folder="" w="320" h="345" clip="1" t="ISY_background2_portrait">
+    <gesture name="New Gesture" type="swipe" direction="up" touches="1">
+      <action phase="begin" command="avFavoritesOff" />
+    </gesture>
+    <btn j="0" x="50" y="107" w="62" h="52" t="isy_grey_single" flip="None" sim="1" l="1" s="1" tags="">
+      <actions>
+        <action>
+          <press delay="0" hold="0" repeat="0" command="av_TV_4" />
+          <press delay="500" hold="0" repeat="0" command="av_TV_Enter" />
+        </action>
+      </actions>
+      <inactive s="0">FOX 4</inactive>
+      <active s="0">FOX 4</active>
+    </btn>
+    <btn j="0" x="125" y="107" w="62" h="52" t="isy_grey_single" flip="None" sim="1" l="1" s="1" tags="">
+      <actions>
+        <action>
+          <press delay="0" hold="0" repeat="0" command="av_TV_5" />
+          <press delay="500" hold="0" repeat="0" command="av_TV_Enter" />
+        </action>
+      </actions>
+      <inactive s="0">NBC 5</inactive>
+      <active s="0">NBC 5</active>
+    </btn>
+    <btn j="0" x="200" y="107" w="62" h="52" t="isy_grey_single" flip="None" sim="1" l="1" s="1" tags="">
+      <actions>
+        <action>
+          <press delay="0" hold="0" repeat="0" command="av_TV_5" />
+          <press delay="750" hold="0" repeat="0" command="av_TV_Astrisk" />
+          <press delay="1500" hold="0" repeat="0" command="av_TV_2" />
+          <press delay="2250" hold="0" repeat="0" command="av_TV_Enter" />
+        </action>
+      </actions>
+      <inactive s="0">NBC 5-2</inactive>
+      <active s="0">NBC 5-2</active>
+    </btn>
+    <btn j="0" x="50" y="175" w="62" h="52" t="isy_grey_single" flip="None" sim="1" l="1" s="1" tags="">
+      <actions>
+        <action>
+          <press delay="0" hold="0" repeat="0" command="av_TV_1" />
+          <press delay="500" hold="0" repeat="0" command="av_TV_1" />
+          <press delay="1000" hold="0" repeat="0" command="av_TV_Enter" />
+        </action>
+      </actions>
+      <inactive s="0">CBS 11</inactive>
+      <active s="0">CBS 11</active>
+    </btn>
+    <btn j="0" x="125" y="175" w="62" h="52" t="isy_grey_single" flip="None" sim="1" l="1" s="1" tags="">
+      <actions>
+        <action>
+          <press delay="0" hold="0" repeat="0" command="av_TV_1" />
+          <press delay="500" hold="0" repeat="0" command="av_TV_3" />
+          <press delay="1000" hold="0" repeat="0" command="av_TV_Enter" />
+        </action>
+      </actions>
+      <inactive s="0">PBS 13</inactive>
+      <active s="0">PBS 13</active>
+    </btn>
+    <btn j="0" x="200" y="175" w="62" h="52" t="isy_grey_single" flip="None" sim="1" l="1" s="1" tags="">
+      <actions>
+        <action>
+          <press delay="0" hold="0" repeat="0" command="av_TV_2" />
+          <press delay="750" hold="0" repeat="0" command="av_TV_3" />
+          <press delay="1500" hold="0" repeat="0" command="av_TV_Astrisk" />
+          <press delay="2250" hold="0" repeat="0" command="av_TV_3" />
+          <press delay="3000" hold="0" repeat="0" command="av_TV_Enter" />
+        </action>
+      </actions>
+      <inactive s="0">Escape
+23-3</inactive>
+      <active s="0">Escape
+23-3</active>
+    </btn>
+    <btn j="900" x="12" y="8" w="60" h="50" t="isy_grey_single" flip="None" sim="1" l="1" s="1" tags="" cmd="avPanelOff">
+      <inactive s="0">Done</inactive>
+      <active s="0">Done</active>
+    </btn>
+  </subpage>
+  <subpage name="z_door_lock_conf" folder="" w="320" h="100" clip="1" t="ISY_background2_portrait">
+    <txt j="0" x="0" y="0" w="320" h="20" t="grey_bold_c" wrap="False" l="0" tags="">Confirm Door Unlock</txt>
+    <btn j="0" x="75" y="25" w="50" h="50" t="isy_grey_yes" flip="None" sim="0" l="0" s="1" tags="">
+      <actions>
+        <action>
+          <press delay="0" hold="0" repeat="0" command="entryUnLockDoor" />
+          <press delay="250" hold="0" repeat="0" command="entryUnlockConfOff" />
+        </action>
+      </actions>
+      <inactive s="0">
+      </inactive>
+      <active s="0">
+      </active>
+    </btn>
+    <btn j="0" x="196" y="25" w="50" h="50" t="isy_grey_no" flip="None" sim="0" l="0" s="1" tags="" cmd="entryUnlockConfOff">
+      <inactive s="0">
+      </inactive>
+      <active s="0">
+      </active>
+    </btn>
+  </subpage>
+  <subpage name="z_conf_open" folder="" w="80" h="200" clip="1">
+    <txt j="0" x="0" y="0" w="80" h="45" t="grey_bold_c" wrap="False" l="0" tags="">
+Confirm
+open
+</txt>
+    <btn j="0" x="11" y="47" w="60" h="50" t="isy_grey_yes" flip="None" sim="1" l="0" s="1" tags="">
+      <actions>
+        <action>
+          <press delay="0" hold="0" repeat="0" command="garageDoorUpOn" />
+          <press delay="0" hold="0" repeat="0" command="garageOpen" />
+          <press delay="200" hold="0" repeat="0" command="ConfOpenOFF" />
+          <press delay="15000" hold="0" repeat="0" command="garageDoorUpOff" />
+        </action>
+      </actions>
+      <inactive s="0">
+      </inactive>
+      <active s="0">
+      </active>
+    </btn>
+    <btn j="0" x="11" y="147" w="60" h="50" t="isy_grey_no" flip="None" sim="1" l="0" s="1" tags="">
+      <actions>
+        <action>
+          <press delay="0" hold="0" repeat="0" command="ConfOpenOFF" />
+          <press delay="0" hold="0" repeat="0" command="garageDoorUpOff" />
+        </action>
+      </actions>
+      <inactive s="0">
+      </inactive>
+      <active s="0">
+      </active>
+    </btn>
+    <btn j="0" x="11" y="97" w="60" h="50" t="isy_grey_single" flip="None" sim="0" l="0" s="1" tags="">
+      <inactive s="0">
+      </inactive>
+      <active s="0">
+      </active>
+    </btn>
+  </subpage>
+  <subpage name="z_BI_conf" folder="" w="150" h="50" clip="1">
+    <btn j="0" x="0" y="0" w="50" h="50" t="isy_grey_yes" flip="None" sim="0" l="0" s="1" tags="">
+      <actions>
+        <action>
+          <press delay="0" hold="0" repeat="0" command="sec_BI_reboot" />
+          <press delay="0" hold="0" repeat="0" command="securityBIConfOff" />
+        </action>
+      </actions>
+      <inactive s="0">
+      </inactive>
+      <active s="0">
+      </active>
+    </btn>
+    <btn j="0" x="100" y="0" w="50" h="50" t="isy_grey_no" flip="None" sim="0" l="0" s="1" tags="" cmd="securityBIConfOff">
+      <inactive s="0">
+      </inactive>
+      <active s="0">
+      </active>
+    </btn>
+  </subpage>
+</gui>
