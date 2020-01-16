@@ -1,2 +1,2 @@
-# CF-ISY_app-iPhone
-Template for ISY iPhone app
+# CF-ISY_app
+Template for ISY app
